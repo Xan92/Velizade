@@ -441,7 +441,7 @@ function renderCheckout() {
           </div>
           <div class="form-group">
             <label class="form-label">Telefon Nömrəsi</label>
-            <input type="tel" class="input-field" id="orderPhone" required pattern="^(\\+994|0)(50|51|55|70|77|99|10)[0-9]{7}$" title="Nömrə Azərbaycan formatında olmalıdır (məsələn: 0551234567 və ya +994551234567)" placeholder="0551234567" />
+            <input type="tel" class="input-field" id="orderPhone" required pattern="^(\\+994|0)(50|51|55|10|70|77|99)[0-9]{6,7}$" title="Nömrə Azərbaycan formatında olmalıdır (məsələn: 0507902000)" placeholder="0507902000" />
           </div>
           <div class="form-group">
             <label class="form-label">Çatdırılma Ünvanı</label>
