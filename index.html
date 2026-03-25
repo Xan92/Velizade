@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velizade — Premium Çiçək Mağazası</title>
+  <meta name="description" content="Bakının ən gözəl buket və gül kolleksiyası. Taze çiçəklər, premium dizayn, sürətli çatdırılma." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TOP INFO BAR -->
+  <div class="top-bar">
+    <span>🚚 Bakı daxilindəki çatdırılma — <strong>PULSUZ</strong> (150₼+ sifariş)</span>
+    <span>📞 +994 51 968 50 25</span>
+  </div>
+
+  <!-- STICKY HEADER -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <button class="hamburger" id="hamburger" aria-label="Menyu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#" class="logo" data-view="home">
+        <img src="logo.png" alt="Velizade Flowers" class="logo-img" />
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#" data-view="home" class="nav-link">Ana Səhifə</a>
+        <div class="dropdown">
+          <a href="#" class="nav-link dropdown-toggle">Kolleksiyalar ▾</a>
+          <div class="dropdown-menu">
+            <a href="#" data-view="shop" data-cat="roses" class="dropdown-item">🌹 Güllər</a>
+            <a href="#" data-view="shop" data-cat="bouquets" class="dropdown-item">💐 Buketlər</a>
+            <a href="#" data-view="shop" data-cat="baskets" class="dropdown-item">🧺 Səbətlər</a>
+            <a href="#" data-view="shop" data-cat="boxes" class="dropdown-item">🎁 Qutu Düzümü</a>
+            <a href="#" data-view="shop" data-cat="all" class="dropdown-item">Hamısı</a>
+          </div>
+        </div>
+        <a href="#" data-view="shop" class="nav-link">Mağaza</a>
+        <a href="#" class="nav-link">Bizim Haqqımızda</a>
+        <a href="#" class="nav-link">Əlaqə</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-wrap">
+          <input type="text" class="search-input" id="searchInput" placeholder="Axtar..." />
+          <button class="icon-btn search-btn" aria-label="Axtar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </button>
+        </div>
+        <button class="icon-btn wishlist-btn" aria-label="Sevimlilər">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" id="cartBtn" aria-label="Səbət">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT (SPA views swapped here) -->
+  <main id="app">
+
+    <!-- ============ HOME VIEW ============ -->
+    <section id="view-home" class="view active">
+
+      <!-- Hero -->
+      <div class="hero">
+        <img src="hero.png" alt="Premium Çiçək Koleksiyası" class="hero-img" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="hero-sub">Yeni Kolleksiya 2026</p>
+          <h1 class="hero-title">Hər Anı <em>Gözəlləşdir</em></h1>
+          <p class="hero-desc">Bakının ən premium gül kolleksiyası. İfadəsiz sevgi üçün mükəmməl buket.</p>
+          <div class="hero-btns">
+            <button class="btn-primary" data-view="shop">İndi Al</button>
+            <button class="btn-ghost" data-view="shop" data-cat="roses">Güllər →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Strip -->
+      <div class="section categories-section">
+        <div class="container">
+          <h2 class="section-title">Kolleksiyalar</h2>
+          <div class="categories-grid">
+            <div class="cat-card" data-view="shop" data-cat="roses">
+              <div class="cat-icon">🌹</div>
+              <span>Güllər</span>
+            </div>
+            <div class="cat-card" data-view="shop" data-cat="bouquets">
+              <div class="cat-icon">💐</div>
+              <span>Buketlər</span>
+            </div>
+            <div class="cat-card" data-view="shop" data-cat="baskets">
+              <div class="cat-icon">🧺</div>
+              <span>Səbətlər</span>
+            </div>
+            <div class="cat-card" data-view="shop" data-cat="boxes">
+              <div class="cat-icon">🎁</div>
+              <span>Qutu Düzümü</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Products -->
+      <div class="section" id="featured-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Ən Çox Satılanlar</h2>
+            <a href="#" class="see-all" data-view="shop">Hamısına bax →</a>
+          </div>
+          <div class="products-grid" id="featured-grid"></div>
+        </div>
+      </div>
+
+      <!-- Banner strip -->
+      <div class="promo-banner">
+        <div class="container promo-inner">
+          <div class="promo-item">
+            <span class="promo-icon">🚚</span>
+            <div>
+              <strong>Pulsuz Çatdırılma</strong>
+              <p>150₼+ sifarişlərə</p>
+            </div>
+          </div>
+          <div class="promo-item">
+            <span class="promo-icon">🌸</span>
+            <div>
+              <strong>Taze Güllər</strong>
+              <p>Gündəlik yeniləmə</p>
+            </div>
+          </div>
+          <div class="promo-item">
+            <span class="promo-icon">🎁</span>
+            <div>
+              <strong>Hədiyyə Qablaşdırma</strong>
+              <p>Pulsuz bağlama</p>
+            </div>
+          </div>
+          <div class="promo-item">
+            <span class="promo-icon">📞</span>
+            <div>
+              <strong>24/7 Dəstək</strong>
+              <p>Həmişə yanınızdayıq</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="section testimonials-section">
+        <div class="container">
+          <h2 class="section-title">Müştəri Rəyləri</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>"Buketi aldım, annem çox sevdi. Keyfiyyət əla, çiçəklər bir həftə dayandı!"</p>
+              <div class="testimonial-author">— Aytən M.</div>
+            </div>
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>"Sürətli çatdırılma, premium qablaşdırma. Növbəti dəfə də buradan alacam."</p>
+              <div class="testimonial-author">— Rauf A.</div>
+            </div>
+            <div class="testimonial-card">
+              <div class="stars">★★★★★</div>
+              <p>"Toy üçün süsləmə sifarişi verdim. Nəticə gözəl oldu, hər kəs bəyəndi!"</p>
+              <div class="testimonial-author">— Leyla H.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============ SHOP VIEW ============ -->
+    <section id="view-shop" class="view">
+      <div class="shop-breadcrumb">
+        <div class="container">
+          <span data-view="home" class="breadcrumb-link">Ana Səhifə</span>
+          <span class="breadcrumb-sep">›</span>
+          <span id="shopBreadcrumb">Mağaza</span>
+        </div>
+      </div>
+      <div class="container shop-layout">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Kateqoriya</h3>
+            <div class="filter-list" id="catFilters">
+              <label class="filter-item"><input type="radio" name="cat" value="all" checked /> Hamısı</label>
+              <label class="filter-item"><input type="radio" name="cat" value="roses" /> 🌹 Güllər</label>
+              <label class="filter-item"><input type="radio" name="cat" value="bouquets" /> 💐 Buketlər</label>
+              <label class="filter-item"><input type="radio" name="cat" value="baskets" /> 🧺 Səbətlər</label>
+              <label class="filter-item"><input type="radio" name="cat" value="boxes" /> 🎁 Qutu Düzümü</label>
+            </div>
+          </div>
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Qiymət Aralığı</h3>
+            <div class="price-range">
+              <input type="range" id="priceRange" min="0" max="500" value="500" step="10" />
+              <div class="price-labels">
+                <span>0₼</span>
+                <span id="priceVal">500₼</span>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Çeşidlə</h3>
+            <select class="sort-select" id="sortSelect">
+              <option value="default">Standart</option>
+              <option value="price-asc">Qiymət: Aşağıdan Yuxarı</option>
+              <option value="price-desc">Qiymət: Yuxarıdan Aşağı</option>
+              <option value="name-asc">A → Z</option>
+            </select>
+          </div>
+        </aside>
+        <!-- Product Grid -->
+        <div class="shop-main">
+          <div class="shop-toolbar">
+            <span id="productCount" class="product-count"></span>
+          </div>
+          <div class="products-grid" id="shop-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCT DETAIL VIEW ============ -->
+    <section id="view-product" class="view">
+      <div class="container" id="product-detail-container"></div>
+    </section>
+
+    <!-- ============ CHECKOUT VIEW ============ -->
+    <section id="view-checkout" class="view">
+      <div class="container" id="checkout-content"></div>
+    </section>
+
+  </main>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h2>Səbətim</h2>
+      <button class="close-btn" id="closeCart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer" id="cartFooter"></div>
+  </aside>
+
+  <!-- WHATSAPP FLOAT BTN -->
+  <a href="https://wa.me/994519685025" target="_blank" class="whatsapp-btn" aria-label="WhatsApp ilə əlaqə">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo" data-view="home" style="cursor: pointer;">
+          <img src="logo.png" alt="Velizade Flowers" class="logo-img" />
+        </div>
+        <p>Bakının ən gözəl çiçəkləri. Sizi gözəlləşdirmək üçün buradayıq.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="Facebook">👥</a>
+          <a href="#" aria-label="TikTok">🎵</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Mağaza</h4>
+        <a href="#" data-view="shop" data-cat="roses">Güllər</a>
+        <a href="#" data-view="shop" data-cat="bouquets">Buketlər</a>
+        <a href="#" data-view="shop" data-cat="baskets">Səbətlər</a>
+        <a href="#" data-view="shop" data-cat="boxes">Qutu Düzümü</a>
+      </div>
+      <div class="footer-links">
+        <h4>Şirkət</h4>
+        <a href="#">Haqqımızda</a>
+        <a href="#">Blog</a>
+        <a href="#">Karyera</a>
+        <a href="#">Əlaqə</a>
+      </div>
+      <div class="footer-links">
+        <h4>Əlaqə</h4>
+        <a href="tel:+994519685025">+994 51 968 50 25</a>
+        <a href="mailto:info@velizade.az">info@velizade.az</a>
+        <p style="margin-top:0.5rem;color:#aaa;font-size:0.85rem">Bakı, Nizami küç. 42</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Velizade. Bütün hüquqlar qorunur.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
